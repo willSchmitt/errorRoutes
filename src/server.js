@@ -18,7 +18,7 @@ app.use((error, request, response, next) => {  // Usado para conectar o insomnia
   if(error instanceof AppError) {
     return response.status(error.statusCode).json({
       status: "error",
-      message: error.message
+      message: error.message,
     });
   }
 
